@@ -4,6 +4,8 @@
 # libraries
 # library(readxl) # added to import excel file, but rdata file already exists
 library(janitor)
+#   If janitor is not installed then run:
+#   install.packages("janitor")
 library(tidyverse)
 
 # import data
@@ -33,4 +35,7 @@ names(occupation) <- occ_names_new
 
 # see variable names now
 names(occupation)
+
+
+# 
 
