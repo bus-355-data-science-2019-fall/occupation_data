@@ -51,8 +51,11 @@ names(occupation)
 
 
 # Which are the 10 fastest growing occupations?
-```{r}
-
+```{r echo=FALSE}
+occupation %>%
+  select(occ_title, emp_ch_per) %>%
+  arrange(desc(emp_ch_per)) %>%
+  head(10)
 ```
 
 
@@ -65,6 +68,12 @@ names(occupation)
 ```{r}
 
 ```
+
+# Which are the 10 occupations with the highest self-employed percentage?
+```{r}
+
+```
+
 
 # Which are the 10 highest paid occupations with a Master's degree?
 ```{r}
