@@ -37,5 +37,3 @@ names(occupation) <- occ_names_new
 names(occupation)
 
 
-# 
-

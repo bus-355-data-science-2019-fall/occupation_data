@@ -1,0 +1,100 @@
+---
+title: "occupation.Rmd"
+author: "bus 355"
+date: "10/3/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(janitor)
+library(tidyverse)
+
+```
+
+## Occupation Data
+
+Load the data
+```{r}
+load("occupation_data.RData")
+
+```
+
+Prep the variable names
+```{r}
+#clean variable names, via janitor package
+names(occupation)
+occupation <- clean_names(occupation)
+
+# create a list of the variable names
+occ_names <- names(occupation)
+
+# see variable names
+occ_names
+
+# Can we change the first variable name?
+occ_names[1] <- "occ_title"
+
+# create a vector of names
+occ_names_new <- c("occ_title","occ_code","occ_type","emp_2018","emp_2028",
+                   "emp_ch_num","emp_ch_per","self_emp_per","occ_openings",
+                   "median_wage","entry_edu","work_exp","otj_training")
+
+# set names to the data
+names(occupation) <- occ_names_new
+
+# see variable names now
+names(occupation)
+
+```
+
+
+
+# Which are the 10 fastest growing occupations?
+```{r}
+
+```
+
+
+# Which are the 10 slowest growing occupations?
+```{r}
+
+```
+
+# Which are the 10 occupations with the highest number of employees?
+```{r}
+
+```
+
+# Which are the 10 highest paid occupations with a Master's degree?
+```{r}
+
+```
+
+
+# Which are the 10 highest paid occupations with a Doctoral degree?
+```{r}
+
+```
+
+# Which are the 10 highest paid occupations with a High School degree?
+```{r}
+
+```
+
+# Which are the 10 highest paid occupations with some college?
+```{r}
+
+```
+
+# Which are the 10 highest paid occupations with a Bachelor's degree?
+```{r}
+
+```
+
+# Which are the 10 highest paid occupations with a Bachelor's degree with NO work experience?
+```{r}
+
+```
+
+
