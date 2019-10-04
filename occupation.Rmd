@@ -16,7 +16,7 @@ library(tidyverse)
 
 Load the data
 ```{r}
-load("occupation_data.RData")
+load("data/occupation_data.RData")
 
 ```
 
@@ -46,7 +46,7 @@ names(occupation) <- occ_names_new
 # see variable names now
 names(occupation)
 
-save(occupation, file = "occupation_names.Rdata")
+save(occupation, file = "data/occupation_names.Rdata")
 
 ```
 
