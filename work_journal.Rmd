@@ -1,0 +1,16 @@
+---
+title: "work_journal.Rmd"
+author: "bus 355"
+date: "10/3/2019"
+output: html_document
+---
+Work Journal
+
+## 2019 10 03
+- Topic came up in class about median wage - why only 99k for median wage?  None above 100k?
+  Turns out, the data was character type and data type.
+
+## 2019 10 04
+- Added data folder
+- condensed # of pre-written examples for sorting and filtering (changes can be made as class requests or at teacher's discretion)
+
