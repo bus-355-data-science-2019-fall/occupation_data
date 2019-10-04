@@ -12,7 +12,7 @@ library(tidyverse)
 
 ```
 
-## Occupation Data
+# Occupation Data, Importing
 
 Load the data
 ```{r}
@@ -20,7 +20,7 @@ load("occupation_data.RData")
 
 ```
 
-Prep the variable names
+Rename the variable names
 ```{r}
 #clean variable names, via janitor package
 names(occupation)
@@ -49,61 +49,4 @@ names(occupation)
 ```
 
 
-
-# Which are the 10 fastest growing occupations?
-```{r echo=FALSE}
-occupation %>%
-  select(occ_title, emp_ch_per) %>%
-  arrange(desc(emp_ch_per)) %>%
-  head(10)
-```
-
-
-# Which are the 10 slowest growing occupations?
-```{r}
-
-```
-
-# Which are the 10 occupations with the highest number of employees?
-```{r}
-
-```
-
-# Which are the 10 occupations with the highest self-employed percentage?
-```{r}
-
-```
-
-
-# Which are the 10 highest paid occupations with a Master's degree?
-```{r}
-
-```
-
-
-# Which are the 10 highest paid occupations with a Doctoral degree?
-```{r}
-
-```
-
-# Which are the 10 highest paid occupations with a High School degree?
-```{r}
-
-```
-
-# Which are the 10 highest paid occupations with some college?
-```{r}
-
-```
-
-# Which are the 10 highest paid occupations with a Bachelor's degree?
-```{r}
-
-```
-
-# Which are the 10 highest paid occupations with a Bachelor's degree with NO work experience?
-```{r}
-
-```
-
-
+Update variable data types
