@@ -33,12 +33,20 @@ occupation %>%
 
 
 ## Which are the 10 slowest growing occupations?
-```{r}
+```{r echo=FALSE}
+occupation %>%
+  select(occ_title, emp_ch_per) %>%
+  arrange(emp_ch_per) %>%
+  head(10)
 
 ```
 
 ## Which are the 10 occupations with the highest number of employees?
-```{r}
+```{recho=FALSE}
+occupation %>%
+  select(occ_title, emp_2018) %>%
+  arrange(desc(emp_2018)) %>%
+  head(11)
 
 ```
 
@@ -48,8 +56,12 @@ occupation %>%
 ```
 
 ## Which are the 10 highest paid occupations with a Master's degree?
-```{r}
-
+```{r echo=FALSE}
+occupation %>%
+  select(occ_title, entry_edu, median_wage) %>%
+  filter(entry_edu == "Bachelor's degree") %>%
+  arrange(desc(median_wage)) %>%
+  head(10)
 ```
 
 ## Which are the 10 highest paid occupations with a Doctoral degree?
