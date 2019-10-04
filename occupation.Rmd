@@ -46,10 +46,15 @@ names(occupation) <- occ_names_new
 # see variable names now
 names(occupation)
 
+save(occupation, file = "occupation_names.Rdata")
+
 ```
 
 
 Update variable data types
+```{r}
+
+```
 
 
 # Occupation Data, Sort and Filter
@@ -81,11 +86,6 @@ occupation %>%
 
 ```
 
-## Which are the 10 occupations with the highest self-employed percentage?
-```{r}
-
-```
-
 ## Which are the 10 highest paid occupations with a Master's degree?
 ```{r echo=FALSE}
 occupation %>%
@@ -96,26 +96,20 @@ occupation %>%
 ```
 
 ## Which are the 10 highest paid occupations with a Doctoral degree?
-```{r}
-
-```
-
-## Which are the 10 highest paid occupations with a High School degree?
-```{r}
-
-```
-
-## Which are the 10 highest paid occupations with some college?
-```{r}
-
-```
-
-## Which are the 10 highest paid occupations with a Bachelor's degree?
-```{r}
+```{r echo=FALSE}
+occupation %>%
+  select(occ_title, entry_edu, median_wage) %>%
+  filter(entry_edu == "Bachelor's degree") %>%
+  arrange(desc(median_wage)) %>%
+  head(10)
 
 ```
 
 ## Which are the 10 highest paid occupations with a Bachelor's degree with NO work experience?
-```{r}
-
+```{r echo=FALSE}
+occupation %>%
+  select(occ_title, entry_edu, median_wage, work_exp) %>%
+  filter(entry_edu == "Bachelor's degree", work_exp == "None") %>%
+  arrange(desc(median_wage)) %>%
+  head(10)
 ```
