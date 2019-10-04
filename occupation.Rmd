@@ -113,3 +113,6 @@ occupation %>%
   arrange(desc(median_wage)) %>%
   head(10)
 ```
+
+# Why are the highest salaries all lower than 100k?
+
